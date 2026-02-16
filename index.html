@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #faf9f7;
+      --text: #1a1a1a;
+      --muted: #888;
+      --accent: #c0392b;
+      --border: #e8e4df;
+      --link: #1a1a1a;
+      --link-hover: #c0392b;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Layout ── */
+    .page {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 5rem 0 7rem;
+    }
+
+    /* ── Header ── */
+    header {
+      margin-bottom: 4rem;
+    }
+
+    .site-name {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    /* ── Year sections ── */
+    .year-group {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .year-group:nth-child(1) { animation-delay: 0.05s; }
+    .year-group:nth-child(2) { animation-delay: 0.12s; }
+    .year-group:nth-child(3) { animation-delay: 0.19s; }
+    .year-group:nth-child(4) { animation-delay: 0.26s; }
+    .year-group:nth-child(5) { animation-delay: 0.33s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
+    }
+
+    .year-label {
+      font-family: 'Lora', serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Article list ── */
+    ul {
+      list-style: none;
+    }
+
+    li {
+      border-bottom: 1px solid var(--border);
+    }
+
+    li a {
+      display: block;
+      padding: 0.65rem 0;
+      text-decoration: none;
+      color: var(--link);
+      font-size: 0.97rem;
+      font-weight: 300;
+      transition: color 0.15s ease, padding-left 0.2s ease;
+    }
+
+    li a:hover {
+      color: var(--link-hover);
+      padding-left: 0.35rem;
+    }
+
+    li a::before {
+      content: '→';
+      display: inline-block;
+      margin-right: 0.55rem;
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      color: var(--accent);
+      font-size: 0.85em;
+    }
+
+    li a:hover::before {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      .page { padding: 3rem 0 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <a class="site-name" href="#">Your Name</a>
+      <h1>Articles</h1>
+      <p class="subtitle">Writing on design, technology, and the way we work — collected since 2021.</p>
+    </header>
+
+    <main>
+
+      <div class="year-group">
+        <div class="year-label">2025</div>
+        <ul>
+          <li><a href="#">The quiet power of constraints in creative work</a></li>
+          <li><a href="#">What I learned shipping a side project in a weekend</a></li>
+          <li><a href="#">On building systems that last</a></li>
+          <li><a href="#">How I read: a personal workflow</a></li>
+          <li><a href="#">Rethinking the daily review</a></li>
+        </ul>
+      </div>
+
+      <div class="year-group">
+        <div class="year-label">2024</div>
+        <ul>
+          <li><a href="#">The case for doing less, better</a></li>
+          <li><a href="#">Why I stopped chasing productivity hacks</a></li>
+          <li><a href="#">Small bets and the art of low-stakes experimentation</a></li>
+          <li><a href="#">Making peace with unfinished work</a></li>
+          <li><a href="#">Notes on attention in a distracted world</a></li>
+          <li><a href="#">The tools I actually use</a></li>
+        </ul>
+      </div>
+
+      <div class="year-group">
+        <div class="year-label">2023</div>
+        <ul>
+          <li><a href="#">Writing as a way of thinking</a></li>
+          <li><a href="#">The underrated value of keeping a log</a></li>
+          <li><a href="#">Learning in public: one year in</a></li>
+          <li><a href="#">On slow mornings and deep work</a></li>
+          <li><a href="#">When good enough is exactly right</a></li>
+        </ul>
+      </div>
+
+      <div class="year-group">
+        <div class="year-label">2022</div>
+        <ul>
+          <li><a href="#">First principles thinking in everyday decisions</a></li>
+          <li><a href="#">How to take notes that actually help you</a></li>
+          <li><a href="#">Building a reading habit from scratch</a></li>
+          <li><a href="#">The art of the weekly review</a></li>
+        </ul>
+      </div>
+
+      <div class="year-group">
+        <div class="year-label">2021</div>
+        <ul>
+          <li><a href="#">Why I started writing online</a></li>
+          <li><a href="#">A beginner's guide to thinking in systems</a></li>
+          <li><a href="#">The compounding value of consistent small actions</a></li>
+        </ul>
+      </div>
+
+    </main>
+
+    <footer>
+      © 2025 Your Name
+    </footer>
+
+  </div>
+</body>
+</html>
