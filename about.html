@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Chris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #faf9f7;
+      --text: #1a1a1a;
+      --muted: #888;
+      --accent: #c0392b;
+      --border: #e8e4df;
+    }
+
+    html { font-size: 17px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .page {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 5rem 0 7rem;
+    }
+
+    /* ── Back link ── */
+    .back {
+      display: inline-block;
+      margin-bottom: 3.5rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.85rem;
+      transition: color 0.15s;
+    }
+    .back:hover { color: var(--accent); }
+    .back::before { content: '← '; }
+
+    /* ── Header ── */
+    .post-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    /* ── Body ── */
+    .post-body p {
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+    }
+
+    .post-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .post-body a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--border);
+      transition: text-decoration-color 0.15s;
+    }
+    .post-body a:hover {
+      text-decoration-color: var(--accent);
+    }
+
+    .sign-off {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      .page { padding: 3rem 0 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <a class="back" href="/">All articles</a>
+
+    <header class="post-header">
+      <h1>About</h1>
+    </header>
+
+    <article class="post-body">
+
+      <p>Hi, I'm Chris.</p>
+
+      <p>I delayed starting this project for many years. The short answer is I was terrified. The real reason is more complicated.</p>
+
+      <p>I've loved writing since I was young. I'd write poems, short stories, and reflections on life. This came naturally to me. It was a way to clear my mind and gain a deeper understanding of my thoughts.</p>
+
+      <p>At some point, when I became an 'adult,' my writing went from a form of self-discovery to self-consciousness. I stopped following my heart. I wrote less for myself and more for the algorithm, fearing if I didn't, my writing would go unseen.</p>
+
+      <p>I felt the pressure to jump on trends, stand out, and monetize.</p>
+
+      <p>It pushed me away from the craft.</p>
+
+      <p>I'd love nothing more than to impact as many lives as possible through my writing, but not by losing myself again.</p>
+
+      <p>So, at the risk of sounding ungrateful for your valuable time, this project is for me, not you.</p>
+
+      <p>It's a way to show up for my 10-year-old self, after giving up on him long ago.</p>
+
+      <p>Maybe you've felt a similar pull to reconnect with yourself. If so, I'd encourage you to explore it.</p>
+
+      <p>In the meantime, I hope you find some value while you're here.</p>
+
+      <p>Thanks for stopping by.</p>
+
+      <div class="sign-off">— Chris</div>
+
+    </article>
+
+    <footer>
+      <a href="/" style="color: inherit; text-decoration: none;">← Back to all articles</a>
+    </footer>
+
+  </div>
+</body>
+</html>
